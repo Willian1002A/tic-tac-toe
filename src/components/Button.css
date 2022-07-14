@@ -1,0 +1,44 @@
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 200px;
+
+}
+.button{
+    border: none;
+    padding: 0px;
+    outline: none;
+
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #6F848E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.button:hover{
+    cursor: pointer;
+}
+.button:active{
+    background-color: #7F959F;
+}
+.X{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background: url("../assets/img/X.png");
+    background-size: cover;
+}
+.O{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background: url("../assets/img/O.png");
+    background-size: cover;
+}

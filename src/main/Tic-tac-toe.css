@@ -1,0 +1,108 @@
+.Background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #3D525B;
+    align-items: center;
+}
+.title{
+    display: flex;
+    width: 600px;
+    height: 120px;
+    background: #4E636C;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+.title > h1{
+    display: flex;
+    width: 570px;
+    height: 90px;
+    justify-content: center;
+
+    background: #6F848E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* White p1 */
+
+    color: #E8E8E8;
+}
+.turn{
+    margin: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 208px; */
+    /* height: 61px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    color: #E8E8E8;
+}
+.turn > span{
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.tic_tac_toe{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    width: 600px;
+    height: 600px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    background: #4E636C;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.none{
+    display: none;
+}
+.reStartButton{
+    border: none;
+    padding: 0px;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 226px;
+    height: 60px;
+    background: #6F848E;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.reStartButton > p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    color: #E8E8E8;
+}
+.reStartButton:hover{
+    cursor: pointer;
+}
+.reStartButton:active{
+    background-color: #7F959F;
+}
