@@ -106,3 +106,89 @@
 .reStartButton:active{
     background-color: #7F959F;
 }
+*{
+    --base-resolution: 1920;
+    --actual-resolution: 360;
+    --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+}
+@media (min-width: 640px) {
+    *{
+        --actual-resolution: 640;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1024px) {
+    *{
+        --actual-resolution: 1024;
+        --mult-factor: calc(1024/1920);
+    }
+}
+@media (min-width: 1360px) {
+    *{
+        --actual-resolution: 1360;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1920px) {
+    *{
+        --actual-resolution: 1920;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+*{
+    --title-width: calc(600px * var(--mult-factor));
+    --title-height: calc(120px * var(--mult-factor));
+    --border-radius: calc(10px * var(--mult-factor));
+    --title-width-h1: calc(570px * var(--mult-factor));
+    --title-height-h1: calc(90px * var(--mult-factor));
+    --font-size-h1: calc(50px * var(--mult-factor));
+    --line-height-h1: calc(61px * var(--mult-factor));
+    --margin-default: calc(25px * var(--mult-factor));
+    --turn-span-margin-x: calc(10px * var(--mult-factor));
+    --turn-span-width-height: calc(40px * var(--mult-factor));
+    --square-button-width-height: calc(200px * var(--mult-factor));
+    --tic-tac-toe-width-height: calc(600px * var(--mult-factor));
+    --restartButton-width: calc(226px * var(--mult-factor));
+    --restartButton-height: calc(60px * var(--mult-factor));
+    --restartButton-font-size: calc(30px * var(--mult-factor));
+    --restartButton-line-height: calc(34px * var(--mult-factor));
+}
+.title{
+    width: var(--title-width);
+    height: var(--title-height);
+    border-radius: var(--border-radius);
+}
+.title > h1{
+    width: var(--title-width-h1);
+    height: var(--title-height-h1);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+}
+.turn{
+    margin: var(--margin-default);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+}
+.turn > span{
+    margin-left: var(--turn-span-margin-x);
+    margin-right: var(--turn-span-margin-x);
+    width: var(--turn-span-width-height);
+    height: var(--turn-span-width-height);
+}
+.tic_tac_toe{
+    grid-template-columns: repeat(3,var(--square-button-width-height));
+    width: var(--tic-tac-toe-width-height);
+    height: var(--tic-tac-toe-width-height);
+    border-radius: var(--border-radius);
+}
+.reStartButton{
+    width: var(--restartButton-width);
+    height: var(--restartButton-height);
+    border-radius: var(--border-radius);
+    margin-top: var(--margin-default);
+}
+.reStartButton > p{
+    font-size: var(--restartButton-font-size);
+    line-height: var(--restartButton-line-height);
+}

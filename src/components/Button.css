@@ -42,3 +42,46 @@
     background: url("../assets/img/O.png");
     background-size: cover;
 }
+*{
+    --base-resolution: 1920;
+    --actual-resolution: 360;
+    --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+}
+@media (min-width: 640px) {
+    *{
+        --actual-resolution: 640;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1024px) {
+    *{
+        --actual-resolution: 1024;
+        --mult-factor: calc(1024/1920);
+    }
+}
+@media (min-width: 1360px) {
+    *{
+        --actual-resolution: 1360;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+@media (min-width: 1920px) {
+    *{
+        --actual-resolution: 1920;
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+*{
+    --square-button-width-height: calc(200px * var(--mult-factor));
+    --button-width-height: calc(150px * var(--mult-factor));
+    --border-radius: calc(10px * var(--mult-factor));
+}
+.square{
+    width: var(--square-button-width-height);
+    height: var(--square-button-width-height);
+}
+.button{
+    width: var(--button-width-height);
+    height: var(--button-width-height);
+    border-radius: var(--border-radius);
+}
