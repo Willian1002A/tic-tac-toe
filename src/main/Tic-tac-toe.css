@@ -108,30 +108,30 @@
 }
 *{
     --base-resolution: 1920;
-    --actual-resolution: 400;
+    --actual-resolution: 360;
     --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
 }
 @media (min-width: 400px) {
     *{
-        --actual-resolution: 640;
+        --actual-resolution: 400;
         --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 640px) {
     *{
-        --actual-resolution: 1024;
+        --actual-resolution: 640;
         --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 1024px) {
     *{
-        --actual-resolution: 1360;
+        --actual-resolution: 1024;
         --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 1360px) {
     *{
-        --actual-resolution: 1920;
+        --actual-resolution: 1360;
         --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
