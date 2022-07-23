@@ -138,6 +138,11 @@
 *{
     --mult-factor: calc(var(--actual-resolution)/var(--base-resolution) * 0.9);
 }
+@media (orientation: portrait) {
+    *{
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution) * 2);
+    }
+}
 *{
     --title-width: calc(600px * var(--mult-factor));
     --title-height: calc(120px * var(--mult-factor));
