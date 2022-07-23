@@ -44,40 +44,43 @@
 }
 *{
     --base-resolution: 1920;
-    --actual-resolution: 360;
-    --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    --actual-resolution: 360
 }
 @media (min-width: 400px) {
     *{
         --actual-resolution: 400;
-        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 640px) {
     *{
         --actual-resolution: 640;
-        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 1024px) {
     *{
         --actual-resolution: 1024;
-        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 1360px) {
     *{
         --actual-resolution: 1360;
-        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
     }
 }
 @media (min-width: 1920px) {
     *{
         --actual-resolution: 1920;
-        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution));
+    }
+}
+* {
+    --mult-factor: calc(var(--actual-resolution)/var(--base-resolution) * 0.9);
+}
+@media (orientation: portrait) {
+    *{
+        --mult-factor: calc(var(--actual-resolution)/var(--base-resolution) * 2);
     }
 }
 *{
+
     --square-button-width-height: calc(200px * var(--mult-factor));
     --button-width-height: calc(150px * var(--mult-factor));
     --border-radius: calc(10px * var(--mult-factor));
